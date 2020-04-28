@@ -13,7 +13,7 @@ const Form = () => {
   return (
     <Wrapper onSubmit={handleSubmit(onSubmit)}>
       <InputDiv>
-        <Label for="name">Name</Label>
+        <Label htmlFor="name">Name</Label>
         <TextInput
           type="text"
           name="name"
@@ -23,7 +23,7 @@ const Form = () => {
       </InputDiv>
 
       <InputDiv>
-        <Label for="email">Email</Label>
+        <Label htmlFor="email">Email</Label>
         <TextInput
           type="email"
           id="email"
@@ -33,7 +33,7 @@ const Form = () => {
       </InputDiv>
 
       <InputDiv>
-        <Label for="discuss">Tell Me What You'd Like To Discuss</Label>
+        <Label htmlFor="discuss">Tell Me What You'd Like To Discuss</Label>
         <TextArea
           name="discuss"
           id="discuss"
