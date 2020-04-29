@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 
+import { Section } from "../Section"
+
 import projectsData from "./projectsData"
 import { Project } from "./Project"
-import { Wrapper, SectionHeading, Buttons, Button } from "./styles"
+import { Container, Buttons, Button } from "./styles"
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(projectsData[0])
@@ -18,11 +20,12 @@ const Portfolio = () => {
   ))
 
   return (
-    <Wrapper id="Portfolio">
-      <SectionHeading>- Portfolio</SectionHeading>
-      <Buttons>{renderButtons}</Buttons>
-      <Project project={selectedProject} />
-    </Wrapper>
+    <Section id="Portfolio" heading="- Portfolio" bgColor="#2d303f">
+      <Container>
+        <Buttons>{renderButtons}</Buttons>
+        <Project project={selectedProject} />
+      </Container>
+    </Section>
   )
 }
 

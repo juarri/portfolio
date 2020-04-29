@@ -26,6 +26,10 @@ export const TextInput = styled.input`
   :focus {
     color: ${({ theme }) => theme.colors.grey};
   }
+
+  @media only screen and (min-width: 750px) {
+    width: 100%;
+  }
 `
 
 export const TextArea = styled.textarea`
@@ -35,6 +39,10 @@ export const TextArea = styled.textarea`
   color: ${({ theme }) => theme.colors.grey};
 
   border: none;
+
+  @media only screen and (min-width: 750px) {
+    width: 100%;
+  }
 `
 
 export const Submit = styled.input`

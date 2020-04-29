@@ -1,15 +1,14 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.section`
-  padding: ${({ theme }) => theme.dimensions.sectionPadding};
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
+export const Container = styled.section`
+  @media only screen and (min-width: 750px) {
+    padding: 7vh 0;
 
-  background-color: ${({ theme }) => theme.colors.darkerBlue};
-`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-export const SectionHeading = styled.section`
-  ${({ theme }) => theme.text.text}
-  color: ${({ theme }) => theme.colors.grey};
+    align-items: center;
+  }
 `
 
 export const Content = styled.div`
@@ -26,14 +25,12 @@ export const Content = styled.div`
     
 
     color: ${({ theme }) => theme.colors.grey};
-
   }
 
   p {
     ${({ theme }) => theme.text.text}
 
     color: ${({ theme }) => theme.colors.grey};
-
   }
 `
 

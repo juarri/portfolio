@@ -2,7 +2,7 @@ const theme = {
   dimensions: {
     sectionPadding: "5vh 5%",
 
-    maxWidth: "1140px",
+    maxWidth: "1440px",
   },
   text: {
     title: `font-family: Roboto;

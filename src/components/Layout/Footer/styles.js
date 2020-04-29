@@ -9,6 +9,10 @@ export const Wrapper = styled.footer`
   align-items: center;
 
   background-color: ${({ theme }) => theme.colors.darkerBlue};
+
+  @media only screen and (min-width: 750px) {
+    padding: 3vh 5%;
+  }
 `
 
 export const Logo = styled.svg`
@@ -17,6 +21,10 @@ export const Logo = styled.svg`
   height: 30px;
 
   fill: ${({ theme }) => theme.colors.white};
+
+  @media only screen and (min-width: 750px) {
+    margin-bottom: 0%;
+  }
 `
 
 export const Text = styled.p`

@@ -1,19 +1,23 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.section`
-  padding: ${({ theme }) => theme.dimensions.sectionPadding};
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
+export const Container = styled.section`
+  margin: 0 auto;
 
   background-color: ${({ theme }) => theme.colors.darkerBlue};
+
+  @media only screen and (min-width: 750px) {
+    display: grid;
+    gap: 10%;
+    grid-template-columns: auto auto;
+  }
 `
 
 export const Content = styled.div`
   position: relative;
-`
 
-export const SectionHeading = styled.p`
-  ${({ theme }) => theme.text.text}
-  color: ${({ theme }) => theme.colors.grey};
+  @media only screen and (min-width: 750px) {
+    align-items: start;
+  }
 `
 
 export const Title = styled.h3`
@@ -34,4 +38,10 @@ export const HalfCircle = styled.img`
   position: absolute;
   top: 50%;
   right: 0;
+
+  @media only screen and (min-width: 750px) {
+    width: 100%;
+
+    left: 0;
+  }
 `
