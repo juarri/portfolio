@@ -18,7 +18,7 @@ const Portfolio = () => {
   ))
 
   return (
-    <Wrapper>
+    <Wrapper id="Portfolio">
       <SectionHeading>- Portfolio</SectionHeading>
       <Buttons>{renderButtons}</Buttons>
       <Project project={selectedProject} />

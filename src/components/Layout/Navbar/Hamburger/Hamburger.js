@@ -11,6 +11,16 @@ const Wrapper = styled.button`
   border: none;
 
   z-index: 900;
+
+  transition: transform 0.3s ease-in-out;
+
+  :hover {
+    transform: ${({ navOpen }) => navOpen && "rotate(.5turn)"};
+  }
+
+  @media only screen and (min-width: 750px) {
+    display: none;
+  }
 `
 
 const Lines = styled.div`
@@ -23,11 +33,15 @@ const Lines = styled.div`
   &:after {
     width: 1.75em;
     height: 3px;
-    background: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white};
 
     transform: ${({ navOpen }) => navOpen && "rotate(45deg)"};
 
     transition: transform 0.2s ease-in-out;
+
+    :hover {
+      background-color: ${({ theme }) => theme.colors.main};
+    }
   }
 
   &:before,
@@ -41,6 +55,7 @@ const Lines = styled.div`
     bottom: 8px;
 
     opacity: ${({ navOpen }) => (navOpen ? "0" : "1")};
+    transition: 0.2s ease-in-out;
   }
 
   &:after {
@@ -60,7 +75,7 @@ const Lines = styled.div`
 
 const Hamburger = ({ navOpen, setNavOpen }) => {
   return (
-    <Wrapper onClick={() => setNavOpen(prev => !prev)}>
+    <Wrapper onClick={() => setNavOpen(prev => !prev)} navOpen={navOpen}>
       <Lines navOpen={navOpen} />
     </Wrapper>
   )

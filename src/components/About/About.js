@@ -18,7 +18,7 @@ const About = () => {
   `)
 
   return (
-    <Wrapper>
+    <Wrapper id="About">
       <SectionHeading>- Who Am I?</SectionHeading>
       <Img fluid={data.placeholderImage.childImageSharp.fluid} />
       <Content>

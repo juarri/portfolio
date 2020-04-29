@@ -27,7 +27,7 @@ const Header = () => {
   `)
 
   return (
-    <Wrapper>
+    <Wrapper id="Header">
       <Content>
         <Hey>Hey, I'm</Hey>
         <Title>Julian Rivera</Title>

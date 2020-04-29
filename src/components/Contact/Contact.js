@@ -14,7 +14,7 @@ import {
 
 const Contact = () => {
   return (
-    <Wrapper>
+    <Wrapper id="Contact">
       <Content>
         <SectionHeading>- Contact</SectionHeading>
         <Title>
