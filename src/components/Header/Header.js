@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-scroll"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -10,7 +11,6 @@ import {
   ConfettiWrapper,
   Confetti,
   Content,
-  Hey,
   Title,
   SubTitle,
   Text,
@@ -40,15 +40,28 @@ const Header = () => {
 
       <Container id="Header">
         <Content>
-          <Hey>Hey, I'm</Hey>
-          <Title>Julian Rivera</Title>
+          <Title>
+            <span>Hey, I'm</span>
+            <br /> Julian Rivera
+          </Title>
+
           <SubTitle>Front End Web Developer</SubTitle>
           <Text>
             A junior in the field that is excited to expand his skills and
             create sites that satisfy the user's needs.
           </Text>
           <Buttons>
-            <Button>Check Me Out</Button>
+            <Button>
+              <Link
+                to="About"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={750}
+              >
+                Check Me Out
+              </Link>
+            </Button>
             <Button secondary>Download CV</Button>
           </Buttons>
         </Content>

@@ -11,22 +11,22 @@ export const Wrapper = styled.section`
 `
 
 export const ConfettiWrapper = styled.div`
+  z-index: 0;
+
+  position: absolute;
+
+  pointer-events: none;
+
   img:nth-child(2) {
     left: 50%;
   }
 `
 
 export const Confetti = styled.img`
-  z-index: 0;
-
-  position: absolute;
-
   max-width: ${({ theme }) => theme.dimensions.maxWidth};
 `
 
 export const Container = styled.header`
-  z-index: 1;
-
   margin: 0 auto;
   padding: ${({ theme }) => theme.dimensions.sectionPadding};
   max-width: ${({ theme }) => theme.dimensions.maxWidth};
@@ -42,6 +42,8 @@ export const Container = styled.header`
 `
 
 export const Content = styled.div`
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -54,20 +56,20 @@ export const Content = styled.div`
   }
 `
 
-export const Hey = styled.p`
-  margin: 0;
-
-  ${({ theme }) => theme.text.subTitle};
-
-  color: ${({ theme }) => theme.colors.main};
-`
-
 export const Title = styled.h1`
   margin: 0.1em 0 0 0;
 
   ${({ theme }) => theme.text.title};
 
   color: ${({ theme }) => theme.colors.white};
+
+  span {
+    margin: 0;
+
+    ${({ theme }) => theme.text.subTitle};
+
+    color: ${({ theme }) => theme.colors.main};
+  }
 `
 
 export const SubTitle = styled.h2`
@@ -93,7 +95,7 @@ export const Buttons = styled.div`
   gap: 1em;
   grid-template-rows: 1fr 1fr;
 
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 400px) {
     grid-template-columns: 1fr 1fr;
   }
 `
@@ -116,11 +118,13 @@ export const Button = styled.button`
 
   cursor: pointer;
 
+  transition: 0.2s;
+
   :hover {
     background: ${({ theme, secondary }) =>
-      secondary ? theme.colors.main : theme.colors.darkBlue};
+      secondary ? theme.colors.main : theme.colors.darkerBlue};
 
     color: ${({ theme, secondary }) =>
-      secondary ? theme.colors.main : theme.colors.dark};
+      secondary ? theme.colors.darkerBlue : theme.colors.main};
   }
 `
