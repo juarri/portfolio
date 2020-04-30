@@ -2,9 +2,13 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import confettiSvg from "../../images/confetti.svg"
+
 import {
   Wrapper,
   Container,
+  ConfettiWrapper,
+  Confetti,
   Content,
   Hey,
   Title,
@@ -29,6 +33,11 @@ const Header = () => {
 
   return (
     <Wrapper>
+      <ConfettiWrapper>
+        <Confetti src={confettiSvg} />
+        <Confetti src={confettiSvg} />
+      </ConfettiWrapper>
+
       <Container id="Header">
         <Content>
           <Hey>Hey, I'm</Hey>

@@ -1,12 +1,32 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.section`
+  position: relative;
+
   width: 100%;
 
   background-color: ${({ theme }) => theme.colors.darkBlue};
+
+  overflow: hidden;
+`
+
+export const ConfettiWrapper = styled.div`
+  img:nth-child(2) {
+    left: 50%;
+  }
+`
+
+export const Confetti = styled.img`
+  z-index: 0;
+
+  position: absolute;
+
+  max-width: ${({ theme }) => theme.dimensions.maxWidth};
 `
 
 export const Container = styled.header`
+  z-index: 1;
+
   margin: 0 auto;
   padding: ${({ theme }) => theme.dimensions.sectionPadding};
   max-width: ${({ theme }) => theme.dimensions.maxWidth};
@@ -14,7 +34,7 @@ export const Container = styled.header`
   background-color: inherit;
 
   @media only screen and (min-width: 750px) {
-    padding: 8vh 5%;
+    padding: 10vh 5%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -30,6 +50,7 @@ export const Content = styled.div`
 
   @media only screen and (min-width: 750px) {
     align-self: center;
+    margin-bottom: 0;
   }
 `
 
@@ -103,5 +124,3 @@ export const Button = styled.button`
       secondary ? theme.colors.main : theme.colors.dark};
   }
 `
-
-export const Mockup = styled.img``
