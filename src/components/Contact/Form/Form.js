@@ -63,7 +63,7 @@ const Form = () => {
         />
       </InputDiv>
 
-      <div data-netlify-recaptcha="true"></div>
+      {/* <div data-netlify-recaptcha="true"></div> */}
 
       <Submit type="submit">Submit</Submit>
     </Wrapper>
