@@ -29,7 +29,6 @@ const Form = () => {
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <InputDiv>
@@ -60,7 +59,6 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
-      <div data-netlify-recaptcha="true"></div>
       <Submit type="submit">Submit</Submit>
     </Wrapper>
   )
