@@ -13,10 +13,13 @@ const Form = () => {
   const { register, handleSubmit } = useForm()
 
   const onSubmit = e => {
+    console.log(e)
+    console.log(encode({ "form-name": "contact", ...e }))
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", e }),
+      body: encode({ "form-name": "contact", ...e }),
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
@@ -34,8 +37,8 @@ const Form = () => {
         <Label htmlFor="name">Name</Label>
         <TextInput
           type="text"
-          name="name"
           id="name"
+          name="name"
           ref={register({ required: true })}
         />
       </InputDiv>
