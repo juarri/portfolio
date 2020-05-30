@@ -45,7 +45,7 @@ export const TextArea = styled.textarea`
   }
 `
 
-export const Submit = styled.input`
+export const Submit = styled.button`
   padding: 1em 2em;
 
   ${({ theme }) => theme.text.text}
