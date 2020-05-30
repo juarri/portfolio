@@ -49,7 +49,7 @@ const Form = () => {
 
       <div data-netlify-recaptcha="true"></div>
 
-      <Submit type="submit" name="submit" value="Submit" />
+      <Submit type="submit">Submit</Submit>
     </Wrapper>
   )
 }
