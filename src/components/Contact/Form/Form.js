@@ -20,18 +20,16 @@ const Form = () => {
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
-
-    console.log(e)
   }
 
   return (
     <Wrapper
       onSubmit={handleSubmit(onSubmit)}
-      method="POST"
+      name="contact"
+      method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="contact" value="contact" />
       <InputDiv>
         <Label htmlFor="name">Name</Label>
         <TextInput
@@ -62,8 +60,6 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
-
-      <div data-netlify-recaptcha="true"></div>
 
       <Submit type="submit">Submit</Submit>
     </Wrapper>
