@@ -1,12 +1,16 @@
 import React from "react"
 
-import { Layout } from "../components/Layout"
-import SEO from "../components/seo"
+import { GlobalStyle } from "../styles/GlobalStyle"
+
+import { Link } from "gatsby"
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-  </Layout>
+  <>
+    <GlobalStyle />
+
+    <h1>Page Not Found</h1>
+    <Link to="/">Home</Link>
+  </>
 )
 
 export default NotFoundPage
