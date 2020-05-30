@@ -29,7 +29,9 @@ const Form = () => {
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <InputDiv>
         <Label htmlFor="name">Name</Label>
         <TextInput
@@ -39,7 +41,6 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
-
       <InputDiv>
         <Label htmlFor="email">Email</Label>
         <TextInput
@@ -49,7 +50,6 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
-
       <InputDiv>
         <Label htmlFor="discuss">Tell Me What You'd Like To Discuss</Label>
         <TextArea
@@ -60,7 +60,7 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
-
+      <div data-netlify-recaptcha="true" />
       <Submit type="submit">Submit</Submit>
     </Wrapper>
   )
