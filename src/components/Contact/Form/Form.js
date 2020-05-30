@@ -13,9 +13,6 @@ const Form = () => {
   const { register, handleSubmit } = useForm()
 
   const onSubmit = e => {
-    console.log(e)
-    console.log(encode({ "form-name": "contact", ...e }))
-
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -32,7 +29,10 @@ const Form = () => {
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
     >
+      <input type="hidden" name="form-name" value="contact" />
+
       <InputDiv>
         <Label htmlFor="name">Name</Label>
         <TextInput
@@ -63,6 +63,8 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
+
+      <div data-netlify-recaptcha="true" />
 
       <Submit type="submit">Submit</Submit>
     </Wrapper>
