@@ -27,7 +27,7 @@ const Form = () => {
   return (
     <Wrapper
       onSubmit={handleSubmit(onSubmit)}
-      method="post"
+      method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
@@ -63,7 +63,7 @@ const Form = () => {
         />
       </InputDiv>
 
-      {/* <div data-netlify-recaptcha="true"></div> */}
+      <div data-netlify-recaptcha="true"></div>
 
       <Submit type="submit">Submit</Submit>
     </Wrapper>
