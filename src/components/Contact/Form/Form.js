@@ -13,7 +13,7 @@ const Form = () => {
   return (
     <Wrapper
       onSubmit={handleSubmit(onSubmit)}
-      action="POST"
+      method="POST"
       data-netlify="true"
     >
       <InputDiv>
