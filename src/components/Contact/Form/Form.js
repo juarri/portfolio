@@ -31,7 +31,7 @@ const Form = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="contact" value="contact" />
       <InputDiv>
         <Label htmlFor="name">Name</Label>
         <TextInput
