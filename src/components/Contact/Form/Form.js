@@ -60,7 +60,7 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
-      <div data-netlify-recaptcha="true" />
+      <div data-netlify-recaptcha="true"></div>
       <Submit type="submit">Submit</Submit>
     </Wrapper>
   )
