@@ -3,11 +3,25 @@ import { useForm } from "react-hook-form"
 
 import { Wrapper, InputDiv, Label, TextInput, TextArea, Submit } from "./styles"
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const Form = () => {
   const { register, handleSubmit } = useForm()
 
-  const onSubmit = () => {
-    console.log("Form submitted")
+  const onSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", e }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
+    console.log(e)
   }
 
   return (
@@ -33,7 +47,7 @@ const Form = () => {
         <TextInput
           type="email"
           id="email"
-          name="name"
+          name="email"
           ref={register({ required: true })}
         />
       </InputDiv>
