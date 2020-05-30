@@ -36,8 +36,6 @@ const Form = () => {
         />
       </InputDiv>
 
-      <div data-netlify-recaptcha="true"></div>
-
       <InputDiv>
         <Label htmlFor="discuss">Tell Me What You'd Like To Discuss</Label>
         <TextArea
@@ -48,6 +46,8 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
+
+      <div data-netlify-recaptcha="true"></div>
 
       <Submit type="submit" name="submit" value="Submit" />
     </Wrapper>
