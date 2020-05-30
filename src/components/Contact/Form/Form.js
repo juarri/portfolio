@@ -6,12 +6,16 @@ import { Wrapper, InputDiv, Label, TextInput, TextArea, Submit } from "./styles"
 const Form = () => {
   const { register, handleSubmit } = useForm()
 
-  const onSubmit = data => {
-    console.log(data)
+  const onSubmit = () => {
+    console.log("Form submitted")
   }
 
   return (
-    <Wrapper onSubmit={handleSubmit(onSubmit)}>
+    <Wrapper
+      onSubmit={handleSubmit(onSubmit)}
+      action="POST"
+      data-netlify="true"
+    >
       <InputDiv>
         <Label htmlFor="name">Name</Label>
         <TextInput
@@ -31,6 +35,8 @@ const Form = () => {
           ref={register({ required: true })}
         />
       </InputDiv>
+
+      <div data-netlify-recaptcha="true"></div>
 
       <InputDiv>
         <Label htmlFor="discuss">Tell Me What You'd Like To Discuss</Label>
