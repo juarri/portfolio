@@ -9,25 +9,25 @@ const Nav = ({ navOpen, setNavOpen }) => {
     <Wrapper navOpen={navOpen}>
       <Ul>
         <Li>
-          <MyLink setNavOpen={setNavOpen} to="Header" offset={-300}>
+          <MyLink setNavOpen={setNavOpen} to="Header" offset={-100}>
             Home
           </MyLink>
         </Li>
         <Hr />
         <Li>
-          <MyLink setNavOpen={setNavOpen} to="About">
+          <MyLink setNavOpen={setNavOpen} to="Projects" offset={-200}>
+            Projects
+          </MyLink>
+        </Li>
+        <Hr />
+        <Li>
+          <MyLink setNavOpen={setNavOpen} to="About" offset={-250}>
             About
           </MyLink>
         </Li>
         <Hr />
         <Li>
-          <MyLink setNavOpen={setNavOpen} to="Portfolio">
-            Portfolio
-          </MyLink>
-        </Li>
-        <Hr />
-        <Li>
-          <MyLink setNavOpen={setNavOpen} to="Contact">
+          <MyLink setNavOpen={setNavOpen} to="Contact" offset={-150}>
             Contact
           </MyLink>
         </Li>

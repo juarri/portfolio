@@ -3,8 +3,6 @@ import styled from "styled-components"
 export const Container = styled.section`
   margin: 0 auto;
 
-  background-color: ${({ theme }) => theme.colors.darkerBlue};
-
   @media only screen and (min-width: 750px) {
     display: grid;
     gap: 10%;
@@ -22,16 +20,37 @@ export const Content = styled.div`
 
 export const Title = styled.h3`
   ${({ theme }) => theme.text.subTitle}
-  color: ${({ theme }) => theme.colors.white};
+  color:  var(--white);
 
   span {
-    color: ${({ theme }) => theme.colors.main};
+    color: var(--main);
   }
 `
 
 export const Email = styled.p`
+  display: flex;
+  align-items: center;
+
   ${({ theme }) => theme.text.text}
-  color: ${({ theme }) => theme.colors.white};
+  color: var(--white);
+
+  cursor: pointer;
+
+  transition: ease-in-out 0.2s;
+
+  :hover {
+    svg {
+      transform: translate(0, -0.2em);
+    }
+  }
+
+  svg {
+    fill: ${({ isCopied }) => (isCopied ? "#00FA9A" : "currentColor")};
+    margin-left: 0.5em;
+    width: 20px;
+
+    transition: ease-in-out 0.2s;
+  }
 `
 
 export const HalfCircle = styled.img`

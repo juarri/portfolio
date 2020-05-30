@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   position: sticky;
   top: 0;
 
-  background-color: ${({ theme }) => theme.colors.darkerBlue};
+  background-color: var(--darker-blue);
 
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ export const Container = styled.div`
   z-index: 900;
 
   width: 100%;
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
+  max-width: var(--max-width);
   padding: 5%;
 
   display: flex;
@@ -26,15 +26,15 @@ export const Container = styled.div`
   justify-content: space-between;
 
   @media only screen and (min-width: 750px) {
-    padding: 3vh 5%;
+    padding: 2.75vh 5%;
   }
 `
 
 export const Logo = styled.svg`
   width: auto;
-  height: 30px;
+  height: 28px;
 
-  fill: ${({ theme }) => theme.colors.white};
+  fill: var(--white);
 
   cursor: pointer;
 
@@ -42,6 +42,6 @@ export const Logo = styled.svg`
 
   :hover,
   :focus {
-    fill: ${({ theme }) => theme.colors.main};
+    fill: var(--main);
   }
 `

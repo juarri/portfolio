@@ -8,7 +8,7 @@ export const Wrapper = styled.footer`
   flex-direction: column;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.colors.darkerBlue};
+  background-color: var(--darker-blue);
 
   @media only screen and (min-width: 750px) {
     padding: 3vh 5%;
@@ -20,7 +20,7 @@ export const Logo = styled.svg`
   width: auto;
   height: 30px;
 
-  fill: ${({ theme }) => theme.colors.white};
+  fill: var(--white);
 
   @media only screen and (min-width: 750px) {
     margin-bottom: 0%;
@@ -29,7 +29,7 @@ export const Logo = styled.svg`
 
 export const Text = styled.p`
   ${({ theme }) => theme.text.text};
-  color: ${({ theme }) => theme.colors.white};
+  color: var(--white);
 
   span {
     font-weight: 900;

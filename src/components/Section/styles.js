@@ -10,14 +10,14 @@ export const Container = styled.section`
   margin: 0 auto;
 
   width: 100%;
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
+  max-width: var(--max-width);
 
-  padding: ${({ theme }) => theme.dimensions.sectionPadding};
+  padding: var(--section-padding);
 
   background-color: inherit;
 `
 
 export const Heading = styled.h3`
   ${({ theme }) => theme.text.text}
-  color: ${({ theme }) => theme.colors.grey};
+  color: var(--gray);
 `

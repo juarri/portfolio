@@ -53,13 +53,13 @@ const Header = () => {
           <Buttons>
             <Button>
               <Link
-                to="About"
+                to="Projects"
                 spy={true}
                 smooth={true}
                 offset={-80}
                 duration={750}
               >
-                Check Me Out
+                Projects
               </Link>
             </Button>
             <Button secondary>Download CV</Button>

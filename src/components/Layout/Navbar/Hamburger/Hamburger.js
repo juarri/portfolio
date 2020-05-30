@@ -33,14 +33,14 @@ const Lines = styled.div`
   &:after {
     width: 1.75em;
     height: 3px;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: var(--white);
 
     transform: ${({ navOpen }) => navOpen && "rotate(45deg)"};
 
     transition: transform 0.2s ease-in-out;
 
     :hover {
-      background-color: ${({ theme }) => theme.colors.main};
+      background-color: var(--main);
     }
   }
 
@@ -63,15 +63,6 @@ const Lines = styled.div`
     transform: ${({ navOpen }) => navOpen && "rotate(90deg) translate(-8px)"};
   }
 `
-
-// const Line = styled.div`
-//   margin: 5px;
-
-//   width: 25px;
-//   height: 2px;
-
-//   background: ${({ theme }) => theme.colors.white};
-// `
 
 const Hamburger = ({ navOpen, setNavOpen }) => {
   return (

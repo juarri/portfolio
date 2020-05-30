@@ -14,17 +14,17 @@ export const Label = styled.label`
 
   ${({ theme }) => theme.text.text}
 
-  color: ${({ theme }) => theme.colors.white};
+  color: var(--white);
 `
 
 export const TextInput = styled.input`
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
-  color: ${({ theme }) => theme.colors.grey};
+  border-bottom: 1px solid var(--gray);
+  color: var(--gray);
 
   :focus {
-    color: ${({ theme }) => theme.colors.grey};
+    color: var(--gray);
   }
 
   @media only screen and (min-width: 750px) {
@@ -35,8 +35,8 @@ export const TextInput = styled.input`
 export const TextArea = styled.textarea`
   padding: 1em;
 
-  background-color: ${({ theme }) => theme.colors.darkBlue};
-  color: ${({ theme }) => theme.colors.grey};
+  background-color: var(--dark-blue);
+  color: var(--gray);
 
   border: none;
 
@@ -50,8 +50,8 @@ export const Submit = styled.input`
 
   ${({ theme }) => theme.text.text}
 
-  background-color: ${({ theme }) => theme.colors.darkBlue};
-  color: ${({ theme }) => theme.colors.white};
+  background-color: var(--dark-blue);
+  color: var(--white);
 
   border: none;
 
@@ -60,7 +60,7 @@ export const Submit = styled.input`
   transition: 0.2s;
 
   :hover {
-    background-color: ${({ theme }) => theme.colors.main};
-    color: ${({ theme }) => theme.colors.darkerBlue};
+    background-color: var(--main);
+    color: var(--dark-blue);
   }
 `

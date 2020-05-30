@@ -4,20 +4,20 @@ export const Wrapper = styled.nav`
   z-index: 300;
 
   position: fixed;
-  left: 0;
+  left: 100%;
   top: 0;
 
   width: 100%;
   height: 100vh;
 
-  background-color: ${({ theme }) => theme.colors.darkerBlue};
+  background-color: var(--darker-blue);
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 
   transform: ${({ navOpen }) =>
-    navOpen ? "translate(0%, 0)" : "translate(100%, 0)"};
+    navOpen ? "translate(-100%, 0)" : "translate(0%, 0)"};
 
   transition: 0.3s ease-in-out;
 
@@ -54,24 +54,23 @@ export const Li = styled.li`
   a {
     transition: 0.2s ease-in-out;
 
-    color: ${({ theme }) => theme.colors.grey};
+    color: var(--gray);
     cursor: pointer;
 
     :hover,
     :focus {
-      color: ${({ theme }) => theme.colors.main};
+      color: var(--white);
     }
   }
 
   .active {
-    color: ${({ theme }) => theme.colors.white};
+    color: var(--white);
   }
 
   @media only screen and (min-width: 750px) {
     all: unset;
 
     position: relative;
-    /* right: 10%; */
 
     margin-left: 3em;
   }

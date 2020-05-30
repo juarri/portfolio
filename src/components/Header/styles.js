@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
 
   width: 100%;
 
-  background-color: ${({ theme }) => theme.colors.darkBlue};
+  background-color: var(--dark-blue);
 
   overflow: hidden;
 `
@@ -23,13 +23,13 @@ export const ConfettiWrapper = styled.div`
 `
 
 export const Confetti = styled.img`
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
+  max-width: var(--max-width);
 `
 
 export const Container = styled.header`
   margin: 0 auto;
-  padding: ${({ theme }) => theme.dimensions.sectionPadding};
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
+  padding: var(--section-padding);
+  max-width: var(--max-width);
 
   background-color: inherit;
 
@@ -61,14 +61,15 @@ export const Title = styled.h1`
 
   ${({ theme }) => theme.text.title};
 
-  color: ${({ theme }) => theme.colors.white};
+  color: var(--white);
 
   span {
-    margin: 0;
+    position: relative;
+    bottom: 0.3em;
 
     ${({ theme }) => theme.text.subTitle};
 
-    color: ${({ theme }) => theme.colors.main};
+    color: var(--main);
   }
 `
 
@@ -77,7 +78,7 @@ export const SubTitle = styled.h2`
 
   ${({ theme }) => theme.text.subTitle};
 
-  color: ${({ theme }) => theme.colors.grey};
+  color: var(--white);
 `
 
 export const Text = styled.p`
@@ -85,7 +86,7 @@ export const Text = styled.p`
 
   ${({ theme }) => theme.text.text};
 
-  color: ${({ theme }) => theme.colors.grey};
+  color: var(--gray);
 
   max-width: 400px;
 `
@@ -101,30 +102,32 @@ export const Buttons = styled.div`
 `
 
 export const Button = styled.button`
-  padding: 1em 2em;
+  padding: 0.5em 1em;
 
   display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background: ${({ theme, secondary }) =>
-    secondary ? theme.colors.darkBlue : theme.colors.main};
+  background: ${({ secondary }) =>
+    secondary ? "var(--dark-blue)" : "var(--main)"};
 
   ${({ theme }) => theme.text.text};
 
   white-space: nowrap;
-  color: ${({ theme, secondary }) =>
-    secondary ? theme.colors.main : theme.colors.dark};
+  color: ${({ secondary }) => (secondary ? "var(--main)" : "var(--dark-blue)")};
 
-  border: ${({ secondary }) => (secondary ? "2px dashed #FFC759" : "none")};
+  border: ${({ secondary }) => (secondary ? "2px dashed var(--main)" : "none")};
+  border-radius: 0.25em;
 
   cursor: pointer;
 
   transition: 0.2s;
 
   :hover {
-    background: ${({ theme, secondary }) =>
-      secondary ? theme.colors.main : theme.colors.darkerBlue};
+    background: ${({ secondary }) =>
+      secondary ? "var(--main)" : "var(--darker-blue)"};
 
-    color: ${({ theme, secondary }) =>
-      secondary ? theme.colors.darkerBlue : theme.colors.main};
+    color: ${({ secondary }) =>
+      secondary ? "var(--darker-blue)" : "var(--main)"};
   }
 `

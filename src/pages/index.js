@@ -7,7 +7,7 @@ import { Layout } from "../components/Layout"
 import { Header } from "../components/Header"
 import { About } from "../components/About"
 import { Technologies } from "../components/Technologies"
-import { Portfolio } from "../components/Portfolio"
+import { Projects } from "../components/Projects"
 import { Contact } from "../components/Contact"
 
 const IndexPage = () => (
@@ -16,9 +16,9 @@ const IndexPage = () => (
     <ThemeProvider theme={theme}>
       <Layout>
         <Header />
-        <About />
+        <Projects />
         <Technologies />
-        <Portfolio />
+        <About />
         <Contact />
       </Layout>
     </ThemeProvider>

@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form"
 import { Wrapper, InputDiv, Label, TextInput, TextArea, Submit } from "./styles"
 
 const Form = () => {
-  const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit } = useForm()
 
   const onSubmit = data => {
     console.log(data)
