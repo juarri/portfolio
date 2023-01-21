@@ -1,0 +1,70 @@
+<footer>
+  <div class="container">
+    <a href="/" class="logo">juarri</a>
+
+    <nav>
+      <ul>
+        <li><a href="https://github.com/juarri">github</a></li>
+        <li><a href="mailto:me@juarri.com" target="_blank">me@juarri.com</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .container {
+    margin: 0 auto;
+    padding: 4rem 10vw;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    all: unset;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+
+  nav ul {
+    all: unset;
+
+    margin-top: 4rem;
+
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    all: unset;
+  }
+
+  nav ul li a {
+    all: unset;
+
+    font-weight: 500;
+
+    cursor: pointer;
+  }
+
+  nav ul li a:hover {
+  }
+
+  @media (min-width: 600px) {
+    .container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav ul {
+      margin-top: 0;
+      flex-direction: row;
+    }
+  }
+</style>
