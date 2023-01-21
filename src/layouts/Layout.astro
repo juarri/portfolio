@@ -1,6 +1,5 @@
 ---
 import "@fontsource/inter/variable-full.css"; // This contains ALL variable axes. Font files are larger.
-// import "@fontsource/inter/variable-full-italic.css"; // Italic variant.
 
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
@@ -32,13 +31,6 @@ const { title } = Astro.props;
 
 <style is:global>
   :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
   }
 
   html {
