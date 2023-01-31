@@ -1,5 +1,5 @@
 ---
-import smilingGlassesEmoji from "../images/smiling-glasses-emoji.png"
+import smilingGlassesEmoji from "../images/smiling-glasses-emoji.png";
 ---
 
 <section>
@@ -7,19 +7,25 @@ import smilingGlassesEmoji from "../images/smiling-glasses-emoji.png"
     <div class="content">
       <img
         src={smilingGlassesEmoji}
-        alt="Smiling Glasses Emoji"
-        width="44"
-        height="44"
+        width="128px"
+        height="128px"
+        alt="Headshot of Julian Rivera"
       />
-      <h1>
-        Hi, I'm Julian Rivera and welcome to <span>Jackass!</span> my site...
-      </h1>
+
+      <h1>Julian Rivera</h1>
+
+      <ul>
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>Accessibility</li>
+      </ul>
+
       <p>
-        I'm a full stack web developer adept at problem solving, accessibility
-        and collaborating. Interested in learning new technologies or novel ways
-        to approach design problems. I appriciate working on projects that have
-        a positive impact on people.
+        Full stack web developer adept at problem solving, listening, and collaborating.
+        Interested in learning new technologies and working on projects that
+        have a positive impact on people.
       </p>
+
       <a href="mailto:me@juarri.com">me@juarri.com</a>
     </div>
   </div>
@@ -28,38 +34,54 @@ import smilingGlassesEmoji from "../images/smiling-glasses-emoji.png"
 <style>
   .container {
     margin: 0 auto;
-    padding: 3rem 10vw;
+    padding: 2rem;
     max-width: 1200px;
   }
 
   .content {
-    width: 85%;
-    max-width: 650px;
+    margin: 0 auto;
+    max-width: 550px;
+
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
   }
 
   img {
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin: 0 auto;
   }
 
   h1 {
-    margin-top: 0;
-    margin-bottom: 2rem;
+    margin: 0;
 
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 700;
-    line-height: 1.25;
+    line-height: 1;
   }
 
-  h1 span {
-    text-decoration: line-through;
+  ul {
+    all: unset;
+
+    margin: 0;
+
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul li {
+    all: unset;
+
+    font-size: 0.875rem;
+    font-weight: 600;
   }
 
   p {
-    margin-top: 0;
-    margin-bottom: 3rem;
+    margin: 0;
 
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.75;
   }
@@ -75,23 +97,5 @@ import smilingGlassesEmoji from "../images/smiling-glasses-emoji.png"
     text-underline-offset: 0.5rem;
 
     cursor: pointer;
-  }
-
-  @media (min-width: 600px) {
-    .text-container {
-      max-width: 800px;
-    }
-
-    .content {
-      width: 80%;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-    }
-
-    p {
-      font-size: 1.25rem;
-    }
   }
 </style>

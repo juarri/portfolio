@@ -1,0 +1,55 @@
+---
+import Tools from "./Tools.astro";
+---
+
+<section>
+  <div class="container">
+    <h2>Resume</h2>
+
+    <section>
+      <h3>Work Experience</h3>
+
+      <ol>
+        <li>
+          <h4>Vertiqul</h4>
+          <strong>Developer</strong>
+          <span>August 2020 - September 2022</span>
+        </li>
+
+        <li>
+          <h4>Glodecor</h4>
+          <strong>Developer & Designer - Freelance</strong>
+          <span>August 2020</span>
+        </li>
+
+        <li>
+          <h4>Navajas Barbershop</h4>
+          <strong>Developer & Designer - Freelance</strong>
+          <span>August 2020</span>
+        </li>
+      </ol>
+    </section>
+
+    <Tools />
+  </div>
+</section>
+
+<style>
+  .container {
+    margin: 0 auto;
+    padding: 2rem 10vw;
+    max-width: 900px;
+  }
+
+  .content {
+    margin: 0 auto;
+    max-width: 650px;
+
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 600px) {
+  }
+</style>
