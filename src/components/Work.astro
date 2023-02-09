@@ -12,25 +12,25 @@ const jobs = [
     company: "Vertiqul",
     logo: {
       src: vertiqulLogo,
-      class: "w-8",
+      class: "w-8 sm:w-10",
     },
     title: "Developer",
     time: "Aug 2020 - Sep 2022",
     description:
-      "A digital publishing where I was the sole developer in a team of awesome designers.",
-    tech: ["HTML", "CSS", "JS", "WordPress", "CloudFlare", "Google Analytics"],
+      "A digital publishing agency, where I was responsible for delivering responsive websites and implementing accessibility measures for college clients. I also successfully trained a non-technical team, providing them with the necessary skills to succeed. Additionally, I was instrumental in revamping the company's website updating system, streamlining the process and improving efficiency.",
+    tech: ["HTML", "CSS", "JS", "A11Y", "WordPress", "CloudFlare", "Google Analytics"],
   },
   {
     url: "https://glodecorcba.com",
     company: "GloDecor",
     logo: {
       src: glodecorLogo,
-      class: "w-12",
+      class: "w-12 sm:w-14",
     },
-    title: "Freelance Developer & Designer",
+    title: "Developer & Designer",
     time: "Jul 2020",
     description:
-      "A quam adipiscing vitae proin sagittis nisl rho sfwncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien eget mi proin sed libero enim sed",
+      "I designed and developed a website for a local business, putting in the research to ensure the site aligned with their goals. To enhance user engagement, I integrated Google Analytics and a contact form, providing valuable insights and making it easy for potential customers to get in touch.",
     tech: ["Next", "React", "TailWind", "Netlify"],
   },
   {
@@ -38,21 +38,21 @@ const jobs = [
     company: "Navajas Barber Shop",
     logo: {
       src: navajasLogo,
-      class: "w-8 rounded-full",
+      class: "w-8 rounded-full sm:w-10",
     },
-    title: "Freelance Developer & Designer",
+    title: "Developer & Designer",
     time: "Jun 2020",
     description:
-      "quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien eget mi proin sed libero enim sed",
+      "I took on the task of designing and developing a website for a local barber shop. My focus was on capturing the unique character of the business through research and thoughtful design. To enhance the user experience, I integrated Google Analytics, providing valuable insights and helping the barber shop stay connected with their audience.",
     tech: ["Next", "React", "Styled Components", "Vercel"],
   },
 ];
 ---
 
-<section class="px-[5vw] py-8">
-  <div class="max-w-xl mx-auto">
+<section id="work" class="px-[5vw] py-8">
+  <div class="max-w-2xl mx-auto">
     <div class="mb-8 flex gap-2 text-neutral-500 stroke-neutral-500">
-      <Icon name="large-suitcase" class="w-4" />
+      <Icon name="large-suitcase" class="w-[17px]" />
       <h2 class="text-sm font-bold">Work History</h2>
     </div>
 
@@ -67,7 +67,7 @@ const jobs = [
                   alt={`${job.company} Logo`}
                   class={job.logo.class}
                 />
-                <h3 class="ml-4 font-bold text-xl">{job.company}</h3>
+                <h3 class="ml-4 font-bold text-xl sm:text-2xl">{job.company}</h3>
                 <Icon name="arrow-right" class="ml-2 -rotate-45 w-5" />
               </a>
             </div>
@@ -76,7 +76,7 @@ const jobs = [
               {job.title} <div class="w-px h-3.5 bg-neutral-500"></div> {job.time}
             </div>
 
-            <p class="mb-3 text-xl">{job.description}</p>
+            <p class="mb-3.5 text-xl">{job.description}</p>
 
             <ul class="flex flex-wrap gap-4">
               {job.tech.map((tech) => (
