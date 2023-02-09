@@ -2,100 +2,42 @@
 import smilingGlassesEmoji from "../images/smiling-glasses-emoji.png";
 ---
 
-<section>
-  <div class="container">
-    <div class="content">
-      <img
-        src={smilingGlassesEmoji}
-        width="128px"
-        height="128px"
-        alt="Headshot of Julian Rivera"
-      />
+<section class="px-[5vw] py-8 pt-0">
+  <div class="max-w-xl mx-auto">
+    <div class="mb-5 flex flex-wrap items-center gap-4 sm:gap-5">
+      <h1 class="text-3xl font-bold sm:text-4xl">Hey, I'm Julian</h1>
+      <span
+        class="inline-flex gap-1.5 items-center px-2 py-0.5 bg-emerald-50 border border-emerald-200 text-xs rounded-full text-emerald-500 font-bold"
+        >Available for hire <div
+          class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"
+        >
+        </div>
+      </span>
+    </div>
 
-      <h1>Julian Rivera</h1>
+    <ul class="mb-5 flex gap-8 text-sm text-neutral-500 font-bold lg:text-base">
+      <li>Frontend</li>
+      <li>Backend</li>
+      <li>Accessibility</li>
+    </ul>
 
-      <ul>
-        <li>Frontend</li>
-        <li>Backend</li>
-        <li>Accessibility</li>
-      </ul>
+    <p class="mb-8 text-2xl">
+      Experienced in problem-solving, effective communication, and collaborating.
+      Eager to expand my knowledge of new technologies and be a part of projects
+      that have a positive impact on people. This line is just to fill out the space
+      ;)
+    </p>
 
-      <p>
-        Full stack web developer adept at problem solving, listening, and collaborating.
-        Interested in learning new technologies and working on projects that
-        have a positive impact on people.
-      </p>
-
-      <a href="mailto:me@juarri.com">me@juarri.com</a>
+    <div class="flex gap-8 items-center">
+      <a
+        href="mailto:me@juarri.com"
+        class="inline-flex rounded-full font-medium gap-4 px-6 py-3 bg-black text-white"
+        >View Resume</a
+      >
+      <a
+        href="mailto:me@juarri.com"
+        class="font-medium underline underline-offset-8">me@juarri.com</a
+      >
     </div>
   </div>
 </section>
-
-<style>
-  .container {
-    margin: 0 auto;
-    padding: 2rem;
-    max-width: 1200px;
-  }
-
-  .content {
-    margin: 0 auto;
-    max-width: 550px;
-
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
-  }
-
-  img {
-    margin: 0 auto;
-  }
-
-  h1 {
-    margin: 0;
-
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1;
-  }
-
-  ul {
-    all: unset;
-
-    margin: 0;
-
-    gap: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  ul li {
-    all: unset;
-
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-
-  p {
-    margin: 0;
-
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.75;
-  }
-
-  a {
-    all: unset;
-
-    font-size: 1.15rem;
-    font-weight: 400;
-    line-height: 1.75;
-
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
-
-    cursor: pointer;
-  }
-</style>

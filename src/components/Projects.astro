@@ -1,0 +1,103 @@
+---
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+
+import lipsEmoji from "../images/lips.png";
+import ballotEmoji from "../images/ballot.png";
+import keyEmoji from "../images/key.png";
+import notepadEmoji from "../images/notepad.png";
+
+const projects = [
+  {
+    name: "Lips",
+    url: "https://lips.juarri.com",
+    logo: {
+      src: lipsEmoji,
+      class: "w-8",
+    },
+    title: "Social Media App",
+    description:
+      "A digital publishing where I was the sole developer in a team of awesome designers.",
+    tech: ["HTML", "CSS", "JS", "WordPress", "CloudFlare", "Google Analytics"],
+  },
+  {
+    name: "Ballot",
+    url: "https://glodecorcba.com",
+    logo: {
+      src: ballotEmoji,
+      class: "w-8",
+    },
+    title: "Polling App",
+    description:
+      "A quam adipiscing vitae proin sagittis nisl rho sfwncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien eget mi proin sed libero enim sed",
+    tech: ["Next", "React", "TailWind", "Netlify"],
+  },
+  {
+    name: "Key",
+    url: "https://navajasbarbershop.site",
+    logo: {
+      src: keyEmoji,
+      class: "w-8",
+    },
+    title: "Password Generator",
+    description:
+      "quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien eget mi proin sed libero enim sed",
+    tech: ["Next", "React", "Styled Components", "Vercel"],
+  },
+  {
+    name: "Notepad",
+    url: "https://navajasbarbershop.site",
+    logo: {
+      src: notepadEmoji,
+      class: "w-8",
+    },
+    title: "Google Keep Clone",
+    description:
+      "quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien eget mi proin sed libero enim sed",
+    tech: ["Next", "React", "Styled Components", "Vercel"],
+  },
+];
+---
+
+<section class="px-[5vw] py-8">
+  <div class="max-w-xl mx-auto">
+    <div class="mb-8 flex gap-2 text-neutral-500 stroke-neutral-500">
+      <Icon name="large-suitcase" class="w-4" />
+      <h2 class="text-sm font-bold">Projects</h2>
+    </div>
+
+    <ul class="flex flex-col gap-12">
+      {
+        projects.map((project) => (
+          <ol>
+            <div class="mb-2 flex items-center">
+              <a href={project.url} target="_blank" class="flex items-center">
+                <Image
+                  src={project.logo.src}
+                  alt={`${project.name} Logo`}
+                  class={project.logo.class}
+                />
+                <h3 class="ml-4 font-bold text-xl">{project.name}</h3>
+                <Icon name="arrow-right" class="ml-2 -rotate-45 w-5" />
+              </a>
+            </div>
+
+            <div class="mb-2 flex gap-2.5 items-center text-neutral-500">
+              {project.title}
+            </div>
+
+            <p class="mb-3 text-xl">{project.description}</p>
+
+            <ul class="flex flex-wrap gap-4">
+              {project.tech.map((tech) => (
+                <li class="inline-flex gap-1.5 items-center px-2 py-0.5 bg-neutral-50 border border-neutral-200 text-xs rounded-full text-neutral-500 font-bold">
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </ol>
+        ))
+      }
+    </ul>
+  </div>
+</section>
