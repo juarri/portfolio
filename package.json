@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.14.1",
+    "@astrojs/partytown": "^1.0.3",
     "@astrojs/tailwind": "^3.0.1",
     "@fontsource/inter": "^4.5.15",
     "astro": "^2.0.9",
