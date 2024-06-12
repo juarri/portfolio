@@ -1,0 +1,76 @@
+---
+const navLinks = [
+  { title: "Home", url: "/" },
+  { title: "About", url: "/about" },
+  { title: "Projects", url: "/projects" },
+  { title: "Contact", url: "/contact" },
+];
+
+const currentMonth = new Date().toLocaleString("default", { month: "long" });
+const currentYear = new Date().getFullYear();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>juarri | web developer | available for hire</title>
+
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@1&f[]=sentient@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="max-w-screen-2xl container mx-auto py-6 px-8">
+        <div class="flex justify-between items-center">
+          <h1 class="">
+            <a
+              ><span
+                class="logo leading-none text-3xl text-red font-black tracking-heading text-secondary-200 sm:text-4xl"
+                >Julian <br /> Rivera</span
+              ></a
+            >
+          </h1>
+
+          <div class="flex gap-8 sm:gap-24 items-center">
+            <p
+              class="uppercase text-gray-400 font-medium text-sm text-balance text-right"
+            >
+              Available for work {currentMonth}
+              {currentYear}
+            </p>
+
+            <nav class="flex flex-col">
+              {
+                navLinks.map((navLink) => (
+                  <a href={navLink.url} class="font-medium leading-snug">
+                    {navLink.title}
+                  </a>
+                ))
+              }
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container px-8 mx-auto py-16">
+          <h2 class="text-balance font-serif text-2xl font-light">
+            Hello, we should design software paradigms that embody wisdom and
+            feel natural.
+          </h2>
+          <p class="mt-8 text-gray-700">
+            So far, I led design and research to make hiring human at Amazon,
+            and built a financial wellness system at Acorns.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
