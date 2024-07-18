@@ -1,0 +1,36 @@
+---
+const work = [
+  {
+    title: "Berkeley",
+    subtitle: "An app to empower women in their fertility journey.",
+    description: "Description",
+    url: "https://www.google.com",
+  },
+];
+---
+
+<section>
+  <div class="px-4">
+    <div>
+      <h2 class="bg-gray-100 inline-block px-2 rounded py-1 text-sm mb-8">
+        Selected Work
+      </h2>
+
+      {
+        work.map((client) => (
+          <section>
+            <div>
+              <h3 class="font-serif text-3xl mb-2">{client.title}</h3>
+              <p class="text-2xl">{client.subtitle}</p>
+              <p>{client.description}</p>
+            </div>
+
+            <a href={client.url} class="">
+              View Project
+            </a>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</section>

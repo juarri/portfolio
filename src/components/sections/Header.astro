@@ -1,0 +1,44 @@
+---
+const navLinks = [
+  { title: "Home", url: "/" },
+  { title: "About", url: "/about" },
+  { title: "Projects", url: "/projects" },
+  { title: "Contact", url: "/contact" },
+];
+
+const currentMonth = new Date().toLocaleString("default", { month: "long" });
+const currentYear = new Date().getFullYear();
+---
+
+<header>
+  <div class="max-w-screen-2xl container mx-auto py-6 px-6">
+    <div class="flex justify-between items-center">
+      <h1 class="">
+        <a
+          ><span class="inline-block text-secondary-200 font-medium"
+            >Julian Rivera</span
+          ></a
+        >
+      </h1>
+
+      <div class="flex gap-8 sm:gap-24 items-center">
+        <p
+          class="uppercase text-gray-400 font-medium text-sm text-balance text-right"
+        >
+          Available for work {currentMonth}
+          {currentYear}
+        </p>
+
+        <nav class="flex flex-row">
+          {
+            navLinks.map((navLink) => (
+              <a href={navLink.url} class="font-medium leading-snug">
+                {navLink.title}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,29 @@
+---
+const titleText =
+  "Hello, I'm Julian, a web developer who builds responsive, user-friendly websites with the help of effective collaboration and a keen eye for detail.";
+---
+
+<script>
+  import { gsap } from "gsap";
+
+  const titleWordElements = document.querySelectorAll("#title > div");
+</script>
+
+<section class="bg-gray-200">
+  <div class="px-4 mx-auto py-0">
+    <div>
+      <h2
+        id="title"
+        class="font-serif text-3xl mb-6 text-balance flex gap-1.5 flex-wrap"
+      >
+        {titleText.split(" ").map((word) => <div>{word}</div>)}
+      </h2>
+
+      <p class="text-balance text-lg">
+        So far, I've done work as a primary developer at an agency, partnering
+        with designers on projects for prestigious clients such as Berkeley and
+        Texas Tech.
+      </p>
+    </div>
+  </div>
+</section>
